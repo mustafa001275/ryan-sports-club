@@ -1,0 +1,264 @@
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 70px); /* subtract navbar height */
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Dark overlay */
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* lighter so text pops */
+  z-index: 1;
+}
+
+/* Centered text */
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  z-index: 2;
+  font-family: Arial, sans-serif;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+  padding: 0 15px; /* avoid cutting text on small screens */
+}
+
+.hero-text h1 {
+  font-size: clamp(28px, 5vw, 48px); /* responsive size */
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: clamp(16px, 2.5vw, 24px);
+}
+
+
+
+
+.container-fluid {
+  background-color: rgb(1, 1, 46);
+}
+
+.border {
+  border: 2px;
+  border-color: black;
+}
+
+.activity-card img {
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.activity-card:hover img {
+  transform: scale(1.05);
+}
+
+.activity-card h5 {
+  margin-top: 10px;
+  font-weight: 600;
+  color: aqua
+}
+
+.carousel-caption h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.body {
+  padding-top: 70px;
+}
+
+.btn {
+  background-color:aqua;
+  text-decoration-color: beige;
+  border-radius:4px;
+  border-color: black;
+
+}
+
+/* .container{
+    background-color:  rgb(4, 17, 77) ;
+    border-radius: 5px;
+    border-color: aqua;
+     */
+/* } */
+.yearly-activities-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.yearly-activities-list li {
+  background-color: #ffffff;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.yearly-activities-list li:hover {
+  background-color: #f0f8ff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.yearly-activities-list li strong {
+  color: #007bff;
+}
+
+/* Navbar CSS */
+.navbar {
+  background-color: rgb(1, 1, 46);
+  /* height: 80px;
+  margin: 20px; */
+  border-radius: 0%;
+  padding: 0.5rem 1rem;
+}
+
+/* Logo or brand styling */
+.navbar-brand {
+  font-weight: 500;
+  color: aqua;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.navbar-brand:hover {
+  color: #00ffff;
+}
+
+/* Membership button */
+.Membership-button {
+  background-color: aqua;
+  color: #000000;
+  font-size: 14px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.Membership-button:hover {
+  background-color: #00cccc;
+}
+
+/* Navbar toggler */
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+/* Nav link styling */
+.nav-link {
+  color: white;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  color: #00ffff;
+}
+
+/* Underline animation on nav links for large screens */
+@media (min-width: 991px) {
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: aqua;
+    visibility: hidden;
+    transition: width 0.3s ease-in-out;
+  }
+
+  .nav-link:hover::before,
+  .nav-link.active::before {
+    width: 100%;
+    visibility: visible;
+  }
+}
+
+.offcanvas-header {
+  background-color: rgb(1, 1, 46);
+  ;
+}
+
+.dropdown-menu {
+  background-color: rgb(1, 1, 46);
+  /* Or match your theme */
+  border-radius: 10px;
+
+}
+
+.dropdown-item:hover {
+  background-color: #021538;
+}
+
+.offcanvas {
+  background-color: rgb(1, 1, 46);
+}
+
+
+.offcanvas .nav-link {
+  color: white;
+}
+
+.offcanvas .nav-link:hover {
+  color: aqua;
+}
+
+
+.offcanvas-title {
+  color: white;
+}
+
+
+.offcanvas .btn-close {
+  filter: invert(1);
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.footer{
+  background-color: rgb(1, 1, 46);
+}
+footer p {
+  font-size: 0.9rem;
+}
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5); /* optional border */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.famous-sportsperson .card-img-top {
+  width: 100%;
+  height: 250px;
+  object-fit: contain; /* no cropping */
+  background-color: #f8f9fa; /* light background for empty areas */
+}
+
+
+

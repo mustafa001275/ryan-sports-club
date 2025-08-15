@@ -1,0 +1,19 @@
+.form-container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      max-width: 500px;
+      width: 100%;
+    }
+    .submit-btn {
+      width: 100%;
+      background-color: aqua;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+    }
+    .submit-btn:hover {
+      background-color: rgb(1, 1, 46); 
+    }

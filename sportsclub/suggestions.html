@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggestions and Complains</title>
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
+
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/suggestion.css" />
+</head>
+
+<body>
+    <!-- navbar -->
+    <div class="container">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand me-auto" href="index.html">
+                        <img src="assets/images/logo1.png" alt="Logo" style="height: 50px;">
+                    </a>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link mx-lg-2" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link mx-lg-2" href="about.html">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link mx-lg-2" href="facilities.html">Facilities</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle mx-lg-2 text-white" href="#"
+                                        id="suggestionsDropdown" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Suggestions
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="suggestionsDropdown">
+                                        <li><a class="dropdown-item text-white" href="suggestions.html"> Suggestions and
+                                                Complain</a>
+                                        </li>
+                                        <li><a class="dropdown-item text-white" href="faqs.html">Faqs</a></li>
+                                        <li><a class="dropdown-item text-white" href="Feedback.html"> Feedback</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link mx-lg-2" href="gallery.html">Gallery</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link mx-lg-2" href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                        <a href="membership.html" class="Membership-button me-2">Membership</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <section class="Suggestions py-5 bg-light text-center">
+        <div class="container">
+            <div class="Suggestions py-5 bg-light">
+                <h1 class="text-left mb-4 fw-bold text-uppercase">Suggestions and Complains</h1>
+                <p class="text-left mb-4">At Ryan Sports Club, we value your input to keep our club running at its best.
+                    If you have ideas for improvement or notice something that needs fixing, share it with us through
+                    our Suggestions & Complaints section. Your thoughts help us enhance our services and address issues
+                    quickly, ensuring a better experience for all members.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="d-flex justify-content-center align-items-center vh-100">
+        <div class="form-container">
+            <h2>Form</h2>
+            <form>
+                <!-- Type -->
+                <div class="mb-3">
+                    <label for="type" class="form-label">Type</label>
+                    <select id="type" class="form-select" required>
+                        <option value="">Select...</option>
+                        <option value="suggestion">Suggestion</option>
+                        <option value="complaint">Complaint</option>
+                    </select>
+                </div>
+
+                <!-- Name -->
+                <div class="mb-3">
+                    <label for="name" class="form-label">Your Name</label>
+                    <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                </div>
+
+                <!-- Email -->
+                <div class="mb-3">
+                    <label for="email" class="form-label">Your Email</label>
+                    <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                    <span id="emailError" class="small"></span>
+                </div>
+
+                <!-- Message -->
+                <div class="mb-3">
+                    <label for="message" class="form-label">Details</label>
+                    <textarea id="message" class="form-control" rows="5"
+                        placeholder="Write your suggestion or complaint here..." required></textarea>
+                    <span id="messageError" class="small"></span>
+                </div>
+
+
+                <!-- Submit Button -->
+                <button type="button" class="submit-btn" onclick="change()">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div id="formMessage" class="mt-2 fw-bold text-success"></div>
+
+
+
+    <!-- footer section -->
+    <footer class="footer text-white pt-5 pb-4">
+        <div class="container text-md-left">
+            <div class="row">
+
+                <!-- Our Mission -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-uppercase mb-3">Our Mission</h5>
+                    <p>
+                        To empower individuals and organizations by delivering innovative and sustainable solutions that
+                        drive
+                        progress and create lasting impact.
+                    </p>
+                </div>
+
+                <!-- Our Vision -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-uppercase mb-3">Our Vision</h5>
+                    <p>
+                        To be a global leader in innovation, setting benchmarks in excellence and making a difference in
+                        every
+                        community we touch.
+                    </p>
+                </div>
+
+                <!-- Contact & Social -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-uppercase mb-3">Contact Us</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>1234 Main Street, karachi, pakistan</p>
+                    <p><i class="fas fa-phone me-2"></i>+92 (234) 567-890</p>
+                    <p><i class="fas fa-envelope me-2"></i>ryansportsclub53@gmail.com</p>
+
+                    <div class="mt-3">
+                        <a href="" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="text-center mt-4 border-top pt-3">
+            <p class="mb-0">&copy; 2025 Ryan Sports Club. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+
+    <script src="assets/javascript/bootstrap.js"></script>
+    <script src="assets/javascript/suggestions.js"></script>
+</body>
+
+</html>
