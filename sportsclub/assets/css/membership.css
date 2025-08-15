@@ -23,7 +23,7 @@
     h2 {
         text-align: center;
         margin-bottom: 30px;
-        color: #333;
+        color:white;
     }
 
     /* Membership Plans */
@@ -117,7 +117,7 @@
 
     /* Special Offer */
     .offer {
-        background: aqua;
+        background:rgb(6, 41, 103);
         color: white;
         text-align: center;
         padding: 20px;
